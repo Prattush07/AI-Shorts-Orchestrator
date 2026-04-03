@@ -21,5 +21,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy everything from the backend folder into the container
 COPY backend/ .
 
-# Final start command is managed by railway.json
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
+# Use shell form to allow environment variable expansion (important for $PORT)
+CMD uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}
