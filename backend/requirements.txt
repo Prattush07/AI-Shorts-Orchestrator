@@ -11,4 +11,4 @@ redis
 sqlalchemy
 pydantic-settings
 imageio-ffmpeg
-moviepy
+moviepy==1.0.3
