@@ -12,14 +12,14 @@ RUN apt-get update && apt-get install -y \
 # Set working directory
 WORKDIR /app
 
-# Copy requirements
-COPY requirements.txt .
+# Copy requirements from backend folder
+COPY backend/requirements.txt .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the entire backend
-COPY . .
+# Copy everything from the backend folder into the container
+COPY backend/ .
 
 # Expose port
 EXPOSE 8000
