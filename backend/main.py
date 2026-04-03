@@ -30,6 +30,10 @@ app.add_middleware(
 
 app.include_router(projects.router, prefix="/api/v1/projects", tags=["Projects"])
 
+@app.get("/")
+async def root():
+    return {"message": "AI Shorts Orchestrator API is Live!"}
+
 @app.get("/health")
 async def health_check():
     return {"status": "healthy", "message": "API is running!"}
