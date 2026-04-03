@@ -5,7 +5,7 @@ yt-dlp
 ffmpeg-python
 python-dotenv
 openai
-deepgram-sdk==3.2.0
+deepgram-sdk==3.1.0
 celery
 redis
 sqlalchemy
