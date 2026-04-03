@@ -82,7 +82,7 @@ export default function Dashboard() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   
   // Dynamically attach to the correct IP so Mobile Phones don't try to query their own 127.0.0.1!
-  const apiBaseUrl = typeof window !== "undefined" ? `http://${window.location.hostname}:8001` : "http://127.0.0.1:8001";
+  const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || (typeof window !== "undefined" ? `http://${window.location.hostname}:8001` : "http://127.0.0.1:8001");
   
   const [projects, setProjects] = useState<Project[]>([
     { id: "proj_1", title: "My 2 Hour Podcast Episode", status: "completed", clips: 12, date: "2 hrs ago", sourceUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
