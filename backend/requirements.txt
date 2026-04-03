@@ -10,3 +10,5 @@ celery
 redis
 sqlalchemy
 pydantic-settings
+imageio-ffmpeg
+moviepy
