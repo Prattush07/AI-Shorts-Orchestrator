@@ -1,6 +1,8 @@
 import os
 import json
-from deepgram import DeepgramClient, PrerecordedOptions, FileSource
+from deepgram import DeepgramClient
+from deepgram.clients.prerecorded.v1.options import PrerecordedOptions
+from deepgram.apps.analyze.v1.types import FileSource
 from openai import OpenAI
 from dotenv import load_dotenv
 
